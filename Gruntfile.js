@@ -91,7 +91,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: '**/*.js',
-        tasks: ['babel', 'clean:tmp'],
+        tasks: ['babel'],
         options: {
           spawn: false
         }
@@ -107,6 +107,18 @@ module.exports = function(grunt) {
     }
   });
 
+  var coreTasks = [
+    'copy',
+    'sass',
+    'postcss',
+    'babel',
+  ]
+
+  var defaultTasks = coreTasks.concat(['watch'])
+
+  var distTasks = ['clean:build'].concat(coreTasks).concat(['clean:tmp'])
+
   // Register Tasks
-  grunt.registerTask('default', ['clean:build', 'copy', 'sass', 'postcss', 'babel', 'clean:tmp', 'watch']);
+  grunt.registerTask('default', defaultTasks);
+  grunt.registerTask('dist', distTasks);
 };

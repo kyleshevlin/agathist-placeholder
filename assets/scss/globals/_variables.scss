@@ -1,0 +1,17 @@
+// Breakpoints
+$breakpoints: (
+  'alpha': (min-width: 480px),
+  'bravo': (min-width: 768px),
+  'charlie': (min-width: 1024px)
+);
+
+// Colors
+$c-black: #222;
+$c-white: #fff;
+$c-off-white: #f1f1f1;
+$c-gray: #aaa;
+$c-primary: hsl(345, 70%, 33%);
+
+// Font Stacks
+$f-fugaz: 'Fugaz One', cursive;
+$f-open: 'Open Sans', sans-serif;
