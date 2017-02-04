@@ -2,14 +2,18 @@
 // Tags
 //////////////////////////////
 
-html {
-  font-family: $f-open;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-body {
-  background-color: $c-primary;
-  color: $c-white;
+html {
+  font-family: $f-open;
+  box-sizing: border-box;
 }
+
+body {}
 
 h1 {
   font-family: $f-fugaz;

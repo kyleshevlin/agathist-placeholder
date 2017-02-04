@@ -3,7 +3,16 @@
 //////////////////////////////
 
 @import
+  'setup/reset',
+  'setup/normalize'
+;
+
+@import
   'globals/variables',
   'globals/mixins',
   'globals/tags'
+;
+
+@import
+  'components/banner'
 ;
