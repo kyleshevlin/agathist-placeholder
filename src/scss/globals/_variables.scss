@@ -1,3 +1,7 @@
+//////////////////////////////
+// Variables
+//////////////////////////////
+
 // Breakpoints
 $breakpoints: (
   'alpha': (min-width: 480px),
@@ -10,8 +14,14 @@ $c-black: #222;
 $c-white: #fff;
 $c-off-white: #f1f1f1;
 $c-gray: #aaa;
-$c-primary: hsl(345, 70%, 33%);
+$c-primary: hsl(338, 65%, 31%);
 
 // Font Stacks
 $f-fugaz: 'Fugaz One', cursive;
 $f-open: 'Open Sans', sans-serif;
+
+// Shevy
+$shevy: (
+  base-font-size: 1.25rem,
+  base-font-scale: (4, 2.8, 2, 1.415, 1.2, 1)
+);

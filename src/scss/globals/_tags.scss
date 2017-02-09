@@ -10,11 +10,38 @@
 
 html {
   font-family: $f-open;
+  font-size: 85%;
   box-sizing: border-box;
+
+  @include bp(alpha) {
+    font-size: 100%;
+  }
+
+  @include bp(charlie) {
+    font-size: 115%;
+  }
 }
 
-body {}
+body {
+  @include body;
+}
 
-h1 {
+h1,
+em {
   font-family: $f-fugaz;
+}
+
+blockquote {
+  background-color: rgba($c-primary, .15);
+  color: darken($c-primary, 10%);
+  font-size: 20px;
+  font-style: italic;
+  border-left: 6px solid $c-primary;
+  padding: bs();
+  margin-bottom: bs();
+}
+
+section {
+  padding-top: bs(2);
+  padding-bottom: bs(2);
 }

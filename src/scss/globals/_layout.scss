@@ -1,0 +1,21 @@
+//////////////////////////////
+// Layout
+//////////////////////////////
+
+.container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include bp(alpha) {
+    width: 80%;
+  }
+
+  @include bp(bravo) {
+    width: 72%;
+  }
+
+  @include bp(charlie) {
+    width: 65%;
+  }
+}

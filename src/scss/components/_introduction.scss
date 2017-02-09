@@ -1,0 +1,15 @@
+//////////////////////////////
+// Introduction
+//////////////////////////////
+
+.introduction {
+  text-align: center;
+
+  p {
+    font-size: 1.415rem;
+
+    @include bp(bravo) {
+      font-size: 2rem;
+    }
+  }
+}

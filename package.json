@@ -16,8 +16,10 @@
     "gulp-babel": "^6.1.2",
     "gulp-cli": "^1.2.2",
     "gulp-connect": "^5.0.0",
+    "gulp-image": "^2.7.3",
     "gulp-postcss": "^6.3.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.0"
+    "gulp-sourcemaps": "^2.4.0",
+    "shevy": "^2.1.0"
   }
 }

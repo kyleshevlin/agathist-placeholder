@@ -2,17 +2,30 @@
 // Import All The Things
 //////////////////////////////
 
+// Setup
 @import
   'setup/reset',
   'setup/normalize'
 ;
 
+// Shevy
+@import
+  '../../node_modules/shevy/core/shevy'
+;
+
+// Globals
 @import
   'globals/variables',
   'globals/mixins',
-  'globals/tags'
+  'globals/tags',
+  'globals/typography',
+  'globals/layout'
 ;
 
+// Components
 @import
-  'components/banner'
+  'components/banner',
+  'components/footer',
+  'components/introduction',
+  'components/tools'
 ;

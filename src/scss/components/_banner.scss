@@ -2,6 +2,8 @@
 // Banner
 //////////////////////////////
 
+$c-banner-color: rgba($c-primary, .6);
+
 .banner {
   display: flex;
   flex-direction: column;
@@ -9,18 +11,32 @@
   align-items: center;
   width: 100%;
   height: 67vh;
-  background: $c-primary;
+  min-height: 280px;
+  background-image:
+    linear-gradient($c-banner-color, $c-banner-color),
+    url('/public/banner-forest-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $c-white;
   text-align: center;
-  padding: 30px;
 
   &-heading {
-    font-size: 64px;
+    font-size: 48px;
     margin-top: 0;
     margin-bottom: .5em;
+
+    @include bp(alpha) {
+      font-size: 60px;
+    }
+
+    @include bp(bravo) {
+      font-size: 72px;
+    }
+
+    @include bp(charlie) {
+      font-size: 96px;
+    }
   }
 
-  &-subheading {
-    font-size: 24px;
-  }
+  &-subheading {}
 }
