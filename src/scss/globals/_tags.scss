@@ -22,9 +22,8 @@ html {
   }
 }
 
-body {
-  @include body;
-}
+@include body;
+body {}
 
 h1,
 em {
