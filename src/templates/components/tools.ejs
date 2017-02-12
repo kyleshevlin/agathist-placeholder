@@ -1,0 +1,55 @@
+<%
+  var tools = [
+    {
+      name: 'React & React Native',
+      svg: '../svgs/React'
+    },
+    {
+      name: 'Redux',
+      svg: '../svgs/Redux'
+    },
+    {
+      name: 'Node',
+      svg: '../svgs/Node'
+    },
+    {
+      name: 'Electron',
+      svg: '../svgs/Electron'
+    },
+    {
+      name: 'Rails',
+      svg: '../svgs/Rails'
+    },
+    {
+      name: 'Sass',
+      svg: '../svgs/Sass'
+    },
+    {
+      name: 'PostCSS',
+      svg: '../svgs/PostCSS'
+    }
+  ]
+%>
+
+<section class="tools">
+  <div class="container">
+    <p>
+      <em>agathist</em> uses some of the latest technologies to create web &amp; mobile solutions.
+    </p>
+
+    <ul class="tools-list">
+      <% tools.forEach(function(tool) { %>
+        <li class="tools-list-item">
+          <div class="tools-list-item-inner">
+            <div class="tools-list-item-logo">
+              <%- include(tool.svg) %>
+            </div>
+            <div class="tools-list-item-name">
+              <%= tool.name %>
+            </div>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</section>

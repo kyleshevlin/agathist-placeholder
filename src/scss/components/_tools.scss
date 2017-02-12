@@ -7,6 +7,7 @@
   &-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     &-item {
       width: 50%;
@@ -24,23 +25,46 @@
         padding-bottom: 25%;
       }
 
-      &:after {
-        content: '';
-        display: block;
-        width: 75%;
-        height: 1px;
-        background: $c-primary;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
       &-inner {
+        width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+
+      &-logo {
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+
+        svg {
+          width: 100%;
+          height: auto;
+          fill: $c-primary;
+          stroke: $c-primary;
+
+          * {
+            fill: $c-primary;
+            stroke: $c-primary;
+
+            &.dont-fill {
+              fill: none;
+            }
+
+            &.fill-white {
+              fill: $c-white;
+            }
+          }
+        }
+      }
+
+      &-name {
+        color: $c-gray;
+        font-family: $f-fugaz;
+        font-size: 1rem;
+        text-transform: lowercase;
       }
     }
   }

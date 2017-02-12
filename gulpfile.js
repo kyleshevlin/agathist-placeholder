@@ -6,10 +6,12 @@ const babel = require('gulp-babel')
 const sourcemaps = require('gulp-sourcemaps')
 const image = require('gulp-image')
 const connect = require('gulp-connect')
+const ejs = require('gulp-ejs')
 
-// HTML
-gulp.task('html', () => {
-  return gulp.src('./src/index.html')
+// Templates
+gulp.task('templates', () => {
+  return gulp.src('./src/templates/index.ejs')
+    .pipe(ejs({}, {}, { ext: '.html' }))
     .pipe(gulp.dest('./build'))
     .pipe(connect.reload())
 })
@@ -58,9 +60,9 @@ gulp.task('connect', () => {
 
 // Watch
 gulp.task('watch', () => {
-  gulp.watch('./src/*.html', ['html'])
+  gulp.watch('./src/templates/**/*.ejs', ['templates'])
   gulp.watch('./src/scss/**/*.scss', ['styles'])
   gulp.watch('./src/js/**/*.js', ['babel'])
 })
 
-gulp.task('default', ['html', 'styles', 'babel', 'images', 'connect', 'watch'])
+gulp.task('default', ['templates', 'styles', 'babel', 'images', 'connect', 'watch'])
