@@ -38,5 +38,7 @@ $c-banner-color: rgba($c-primary, .6);
     }
   }
 
-  &-subheading {}
+  &-subheading {
+    font-family: $f-open;
+  }
 }

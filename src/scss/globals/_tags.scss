@@ -25,22 +25,42 @@ html {
 @include body;
 body {}
 
-h1,
+a {
+  color: currentColor;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 em {
   font-family: $f-fugaz;
 }
 
 blockquote {
-  background-color: rgba($c-primary, .15);
-  color: darken($c-primary, 10%);
-  font-size: 20px;
+  color: $c-primary;
+  font-size: 24px;
   font-style: italic;
-  border-left: 6px solid $c-primary;
+  text-align: center;
+  text-transform: uppercase;
   padding: bs();
   margin-bottom: bs();
+
+  @include bp(bravo) {
+    font-size: 36px;
+  }
+
+  @include bp(charlie) {
+    font-size: 48px;
+  }
 }
 
 section {
   padding-top: bs(2);
   padding-bottom: bs(2);
+
+  @include bp(bravo) {
+    padding-top: bs(4);
+    padding-bottom: bs(4);
+  }
 }

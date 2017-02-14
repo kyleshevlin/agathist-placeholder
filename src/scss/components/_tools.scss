@@ -4,6 +4,13 @@
 
 .tools {
 
+  &-header {
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
   &-list {
     display: flex;
     flex-wrap: wrap;

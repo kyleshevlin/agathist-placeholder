@@ -10,11 +10,12 @@ $breakpoints: (
 );
 
 // Colors
+$c-primary: hsl(338, 65%, 31%);
 $c-black: #222;
 $c-white: #fff;
 $c-off-white: #f1f1f1;
 $c-gray: #aaa;
-$c-primary: hsl(338, 65%, 31%);
+$c-light-gray: lighten(desaturate($c-primary, 55%), 60%);
 
 // Font Stacks
 $f-fugaz: 'Fugaz One', cursive;
@@ -23,5 +24,6 @@ $f-open: 'Open Sans', sans-serif;
 // Shevy
 $shevy: (
   base-font-size: 1.25rem,
+  base-line-height: 1.8,
   base-font-scale: (4, 2.8, 2, 1.415, 1.2, 1)
 );
