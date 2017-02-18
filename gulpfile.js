@@ -50,6 +50,12 @@ gulp.task('images', () => {
     .pipe(gulp.dest('./build/public'))
 })
 
+// Favicons
+gulp.task('favicons', () => {
+  return gulp.src('./src/assets/favicons/**')
+    .pipe(gulp.dest('./build/public'))
+})
+
 // Connect
 gulp.task('connect', () => {
   connect.server({
@@ -65,6 +71,6 @@ gulp.task('watch', () => {
   gulp.watch('./src/js/**/*.js', ['babel'])
 })
 
-gulp.task('shared', ['templates', 'styles', 'babel', 'images'])
+gulp.task('shared', ['templates', 'styles', 'babel', 'images', 'favicons'])
 gulp.task('default', ['shared', 'connect', 'watch'])
 gulp.task('dist', ['shared'])
