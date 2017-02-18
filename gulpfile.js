@@ -65,4 +65,6 @@ gulp.task('watch', () => {
   gulp.watch('./src/js/**/*.js', ['babel'])
 })
 
-gulp.task('default', ['templates', 'styles', 'babel', 'images', 'connect', 'watch'])
+gulp.task('shared', ['templates', 'styles', 'babel', 'images'])
+gulp.task('default', ['shared', 'connect', 'watch'])
+gulp.task('dist', ['shared'])
