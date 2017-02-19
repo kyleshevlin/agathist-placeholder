@@ -38,13 +38,15 @@ em {
 }
 
 blockquote {
-  color: $c-primary;
+  background-color: $c-primary;
+  color: $c-white;
+  font-family: $f-fugaz;
   font-size: 24px;
-  font-style: italic;
+  line-height: 1.4;
   text-align: center;
   text-transform: uppercase;
-  padding: bs();
-  margin-bottom: bs();
+  padding: bs(2) 0;
+  margin: bs(2) 0;
 
   @include bp(bravo) {
     font-size: 36px;
@@ -52,6 +54,7 @@ blockquote {
 
   @include bp(charlie) {
     font-size: 48px;
+    padding: bs(3) 0;
   }
 }
 

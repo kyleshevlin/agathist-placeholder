@@ -7,6 +7,7 @@
 
   p {
     font-size: 1.415rem;
+    margin-bottom: 0;
 
     @include bp(bravo) {
       font-size: 2rem;

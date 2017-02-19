@@ -1,0 +1,28 @@
+//////////////////////////////
+// Buttons
+//////////////////////////////
+
+.btn {
+  display: inline-block;
+  background-color: $c-primary;
+  color: $c-white;
+  line-height: 1.4;
+  text-decoration: none;
+  padding: bs(.25) bs(.5);
+  border-radius: 4px;
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: darken($c-primary, 10%);
+  }
+
+  &--light {
+    @extend .btn;
+    background-color: $c-white;
+    color: $c-primary;
+
+    &:hover {
+      background-color: darken($c-white, 10%);
+    }
+  }
+}
